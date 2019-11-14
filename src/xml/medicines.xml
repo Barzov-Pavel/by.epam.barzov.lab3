@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medicines xsi:schemaLocation="./medicines.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <medicine name="Valium">
+        <group>benzodiazepine</group>
+        <analogs>Diazepam</analogs>
+        <versions version="TABLET">
+            <pharm name="Roche">
+                <certificate id="123">
+                    <startDate>1960-01-25</startDate>
+                    <expirationDate>2025-01-25</expirationDate>
+                    <registrationOrganization>American Medical Association</registrationOrganization>
+                </certificate>
+                <package>
+                    <type>BLISTER</type>
+                    <amount>50</amount>
+                    <price>25000</price>
+                </package>
+                <dosage>
+                    <number>1</number>
+                    <periodicity>4</periodicity>
+                </dosage>
+            </pharm>
+        </versions>
+    </medicine>
+
+    <medicine name="Flagyl">
+        <group>antibiotic</group>
+        <analogs>Metronidazole</analogs>
+        <analogs>Abozole</analogs>
+        <analogs>Ambizole</analogs>
+        <versions version="TABLET">
+            <pharm name="Pfizer">
+                <certificate id="789">
+                    <startDate>1970-03-15</startDate>
+                    <expirationDate>2025-03-15</expirationDate>
+                    <registrationOrganization>FDA</registrationOrganization>
+                </certificate>
+                <package>
+                    <type>BLISTER</type>
+                    <amount>50</amount>
+                    <price>45800</price>
+                </package>
+                <dosage>
+                    <number>1</number>
+                    <periodicity>2</periodicity>
+                </dosage>
+            </pharm>
+            <pharm name="PLIVA">
+                <certificate id="15620">
+                    <startDate>1980-03-15</startDate>
+                    <expirationDate>2030-03-15</expirationDate>
+                    <registrationOrganization>FDA</registrationOrganization>
+                </certificate>
+                <package>
+                    <type>BLISTER</type>
+                    <amount>25</amount>
+                    <price>25600</price>
+                </package>
+                <dosage>
+                    <number>1</number>
+                    <periodicity>3</periodicity>
+                </dosage>
+            </pharm>
+        </versions>
+
+        <versions version="CAPSULE">
+            <pharm name="PLIVA">
+                <certificate id="15619">
+                    <startDate>1980-03-15</startDate>
+                    <expirationDate>2030-03-15</expirationDate>
+                    <registrationOrganization>FDA</registrationOrganization>
+                </certificate>
+                <package>
+                    <type>BLISTER</type>
+                    <amount>50</amount>
+                    <price>25600</price>
+                </package>
+                <dosage>
+                    <number>2</number>
+                    <periodicity>2</periodicity>
+                </dosage>
+            </pharm>
+        </versions>
+    </medicine>
+</medicines>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <element name="medicines">
+        <complexType>
+            <sequence>
+
+                <element name="medicine" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="group" type="string"/>
+                            <element name="analogs" type="string" maxOccurs="unbounded"/>
+                            <element name="versions" maxOccurs="unbounded">
+                                <complexType>
+                                    <sequence>
+                                        <element name="pharm" maxOccurs="unbounded">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="certificate">
+                                                        <complexType>
+                                                            <sequence>
+                                                                <element name="startDate" type="string"/>
+                                                                <element name="expirationDate" type="string"/>
+                                                                <element name="registrationOrganization" type="string"/>
+                                                            </sequence>
+                                                            <attribute name="id" type="int" use="required"/>
+                                                        </complexType>
+                                                    </element>
+
+                                                    <element name="package">
+                                                        <complexType>
+                                                            <sequence>
+                                                                <element name="type">
+                                                                    <simpleType>
+                                                                        <restriction base="string">
+                                                                            <enumeration value="BLISTER"/>
+                                                                            <enumeration value="AMPULE"/>
+                                                                            <enumeration value="BOTTLE"/>
+                                                                            <enumeration value="BOX"/>
+                                                                            <enumeration value="VIAL"/>
+                                                                            <enumeration value="TUBE"/>
+                                                                        </restriction>
+                                                                    </simpleType>
+                                                                </element>
+                                                                <element name="amount" type="int"/>
+                                                                <element name="price" type="long"/>
+                                                            </sequence>
+                                                        </complexType>
+                                                    </element>
+
+                                                    <element name="dosage">
+                                                        <complexType>
+                                                            <sequence>
+                                                                <element name="number" type="byte"/>
+                                                                <element name="periodicity" type="byte"/>
+                                                            </sequence>
+                                                        </complexType>
+                                                    </element>
+
+                                                </sequence>
+                                                <attribute name="name" type="string" use="required"/>
+                                            </complexType>
+                                        </element>
+                                    </sequence>
+                                    <attribute name="version">
+                                        <simpleType>
+                                            <restriction base="string">
+                                                <enumeration value="TABLET"/>
+                                                <enumeration value="CAPSULE"/>
+                                                <enumeration value="LIQUID"/>
+                                                <enumeration value="POWDERS"/>
+                                                <enumeration value="GRANULES"/>
+                                                <enumeration value="GEL"/>
+                                                <enumeration value="GAS"/>
+                                            </restriction>
+                                        </simpleType>
+                                    </attribute>
+                                </complexType>
+                            </element>
+                        </sequence>
+                        <attribute name="name" type="string" use="required"/>
+                    </complexType>
+                </element>
+
+            </sequence>
+        </complexType>
+    </element>
+</schema>
