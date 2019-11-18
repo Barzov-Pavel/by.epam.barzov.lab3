@@ -2,9 +2,7 @@ package Runner;
 
 import Comparators.MedicineComparator;
 import domain.Medicine;
-import parcers.MedicinesXMLReader;
-import parcers.MedicinesXMLValidator;
-import parcers.MedicinesXMLWriter;
+import parcers.*;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.FileNotFoundException;
