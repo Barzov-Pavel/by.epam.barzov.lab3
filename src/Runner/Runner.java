@@ -16,22 +16,19 @@ public class Runner {
         MedicinesXMLReader medicinesXMLReader = new MedicinesXMLReader();
         MedicinesXMLWriter medicinesXMLWriter = new MedicinesXMLWriter();
 
-        System.out.println(medicinesXMLValidator.valid(
-                "src\\xml\\medicines.xsd",
-                "src\\xml\\medicines.xml"));
-        List<Medicine> medicines = medicinesXMLReader.read("src\\xml\\medicines.xml");
-        System.out.println(medicines);
+        if (medicinesXMLValidator.valid("src\\xml\\medicines.xsd", "src\\xml\\medicines.xml")) {
+            List<Medicine> medicines = medicinesXMLReader.read("src\\xml\\medicines.xml");
+            System.out.println(medicines);
+            Collections.sort(medicines, new MedicineComparator());
+            System.out.println(medicines);
 
-
-        Collections.sort(medicines, new MedicineComparator());
-
-        System.out.println(medicines);
-
-
-        try {
-            medicinesXMLWriter.write(medicines, "src\\xml\\medicinesWriter.xml");
-        } catch (XMLStreamException e) {
-            e.printStackTrace();
+            try {
+                medicinesXMLWriter.write(medicines, "src\\xml\\medicinesWriter.xml");
+            } catch (XMLStreamException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("XML document not valid");
         }
     }
 }
