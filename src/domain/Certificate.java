@@ -6,9 +6,6 @@ public class Certificate {
     private String expirationDate;
     private String registrationOrganization;
 
-    public Certificate() {
-    }
-
     public int getId() {
         return id;
     }

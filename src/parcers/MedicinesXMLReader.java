@@ -90,7 +90,6 @@ public class MedicinesXMLReader {
             try {
                 reader.close();
             } catch (Exception e) {
-                System.out.println(e.getMessage());
             }
         }
         return medicines;

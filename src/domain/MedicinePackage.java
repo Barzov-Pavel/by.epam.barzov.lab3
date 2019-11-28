@@ -5,9 +5,6 @@ public class MedicinePackage {
     private int amount;
     private long price;
 
-    public MedicinePackage() {
-    }
-
     public PackageType getPackageType() {
         return packageType;
     }

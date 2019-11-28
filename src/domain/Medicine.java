@@ -11,9 +11,6 @@ public class Medicine {
     private Map<String, List<MedicineProducer>> producers = new HashMap<>();
     private List<MedicineProducer> listProducers = new ArrayList<>();
 
-    public Medicine() {
-    }
-
     public String getName() {
         return name;
     }

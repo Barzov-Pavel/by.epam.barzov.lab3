@@ -1,13 +1,10 @@
 package domain;
 
 public class MedicineProducer {
-    protected String name;
+    private String name;
     private Certificate certificate;
     private MedicinePackage pack;
     private Dosage dosage;
-
-    public MedicineProducer() {
-    }
 
     public String getName() {
         return name;

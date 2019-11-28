@@ -4,9 +4,6 @@ public class Dosage {
     private byte amount;
     private byte periodicity;
 
-    public Dosage() {
-    }
-
     public byte getAmount() {
         return amount;
     }
